@@ -1,0 +1,134 @@
+body {
+  min-height: 100vh;
+  background-color: #f4f4f4;
+}
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pillow {
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  border: 10px solid black;
+  border-radius: 150px 150px 150px 150px;
+  position: relative;
+}
+.pillow:before,
+.pillow:after {
+  position: absolute;
+  top: -10px;
+  content: "";
+  width: 80px;
+  height: 50px;
+  background: white;
+  border: 10px solid black;
+  border-bottom: none;
+  border-radius: 50px 50px 0 0;
+}
+.pillow:before {
+  left: 0;
+  transform: rotate(-45deg);
+}
+.pillow:after {
+  right: 0;
+  transform: rotate(45deg);
+}
+.edges:before,
+.edges:after {
+  position: absolute;
+  bottom: -10px;
+  content: "";
+  width: 75px;
+  height: 50px;
+  background: white;
+  border: 10px solid black;
+  border-top: none;
+  border-radius: 0 0 50px 50px;
+}
+.edges:before {
+  left: 0;
+  transform: rotate(45deg);
+}
+.edges:after {
+  right: 0;
+  transform: rotate(-45deg);
+}
+.indent {
+  z-index: 10;
+  position: absolute;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  height: 33%;
+  transform: translateX(-50%);
+  border-top: 10px solid black;
+  border-radius: 100% 100% 0 0;
+}
+.cat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+.cat .head {
+  z-index: 5;
+  position: absolute;
+  left: 15%;
+  top: 65%;
+  width: 100px;
+  height: 100px;
+  border: 10px solid black;
+  border-radius: 50%;
+  background-color: #c9c9c9;
+}
+.cat .head .ear {
+  position: absolute;
+  background-color: #c9c9c9;
+  width: 20px;
+  height: 20px;
+  border: 10px solid black;
+  border-bottom: none;
+  transform: rotate(-8deg);
+}
+.cat .head .ear-1 {
+  border-right: none;
+  left: -10%;
+  top: 10%;
+}
+.cat .head .ear-2 {
+  border-left: none;
+  top: -7%;
+  left: 70%;
+}
+.cat .head .eye {
+  position: absolute;
+  width: 20px;
+  border: 5px solid black;
+  transform: rotate(-10deg);
+  border-radius: 50%;
+}
+.cat .head .eye-1 {
+  top: 40%;
+  left: 10%;
+}
+.cat .head .eye-2 {
+  top: 30%;
+  right: 10%;
+}
+.cat .body {
+  z-index: 1;
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  width: 250px;
+  height: 130px;
+  transform: rotate(-10deg);
+  background-color: #c9c9c9;
+  border: 10px solid black;
+  border-radius: 50%;
+}
