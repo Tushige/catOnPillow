@@ -137,7 +137,11 @@ body {
   border-radius: 50%;
 }
 .cat .tail {
+  z-index: 2;
   position: absolute;
+  top: 90%;
+  left: 40%;
+  transform: rotate(15deg);
   width: 150px;
   height: 20px;
   background-color: #c9c9c9;
