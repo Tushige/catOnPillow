@@ -153,7 +153,7 @@ body {
   .tail {
     z-index: 2;
     position: absolute;
-    top: 90%;
+    top: 95%;
     left: 40%;
     transform: rotate(15deg);
     width: 150px;
@@ -161,5 +161,43 @@ body {
     background-color: @cat-palette;
     border: 10px solid black;
     border-radius: 50%;
+  }
+  &:hover {
+    .tail {
+      animation-name: wiggle;
+      animation-duration: 0.3s;
+      animation-iteration-count: infinite;
+    }
+
+    .eye {
+      width: 5px;
+      height: 5px;
+      &-1 {
+        top: 35%;
+        left: 20%;
+      }
+      &-2 {
+        top: 25%;
+        right: 20%;
+      }
+    }
+  }
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(15deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(15deg);
   }
 }
